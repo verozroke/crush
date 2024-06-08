@@ -1,7 +1,7 @@
 <template>
   <header class="absolute inset-x-0 top-0 z-50">
     <nav
-      class="flex items-center justify-between py-6 px-20"
+      class="flex items-center justify-between py-6 px-6 md:px-20"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
@@ -11,7 +11,7 @@
         >
           <span class="sr-only">Crush</span>
           <img
-            class="h-8 w-auto"
+            class="h-8  object-cover"
             src="~/assets/images/logo.png"
             alt=""
           />
