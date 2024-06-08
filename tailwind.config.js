@@ -13,7 +13,12 @@ export default {
       formular: ['Formular'],
       tehuti: ['Tehuti'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        darkblue: '#003399',
+        'crush-pink': '#fe01ff',
+      },
+    },
   },
   plugins: [],
 }
