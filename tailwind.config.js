@@ -9,6 +9,10 @@ export default {
     './error.vue',
   ],
   theme: {
+    fontFamily: {
+      formular: ['Formular'],
+      tehuti: ['Tehuti'],
+    },
     extend: {},
   },
   plugins: [],
