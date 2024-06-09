@@ -1,5 +1,8 @@
 <template>
-  <div class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+  <div
+    id="AboutUs"
+    class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+  >
     <div
       class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
       aria-hidden="true"

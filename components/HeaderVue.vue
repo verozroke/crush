@@ -34,13 +34,13 @@
         <a
           v-for="item in navigation"
           :key="item.name"
-          :href="item.href"
           class="text-sm font-medium leading-6 text-white"
+          @click="scrollDown(item.href)"
         >{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button
-          type="submit"
+          @click="scrollDown('Form')"
           class="gap-2 items-center font-semibold leading-6 text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
         >Связаться
           <PhoneXMarkIcon class="h-4 w-4" />
@@ -86,13 +86,20 @@
               <a
                 v-for="item in navigation"
                 :key="item.name"
-                :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-darkblue hover:bg-gray-50"
+                @click="() => {
+            mobileMenuOpen = false
+            scrollDown(item.href)
+          }"
               >{{ item.name }}</a>
             </div>
             <div class="py-6">
               <button
                 type="submit"
+                @click="() => {
+            mobileMenuOpen = false
+            scrollDown('Form')
+          }"
                 class="gap-2 items-center font-semibold leading-6 w-full text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >Связаться
                 <PhoneXMarkIcon class="h-4 w-4" />
@@ -115,12 +122,20 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { PhoneXMarkIcon } from '@heroicons/vue/20/solid'
 
 
+function scrollDown(blockID: string) {
+  const $block = document.getElementById(blockID) ?? document.createElement('div')
+  $block.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
+
 const navigation = [
-  { name: 'Главная', href: '#' },
-  { name: 'Почему Crush?', href: '#' },
-  { name: 'Преимущества', href: '#' },
-  { name: 'Ассортимент', href: '#' },
-  { name: 'Контакты', href: '#' },
+  { name: 'Главная', href: 'Hero' },
+  { name: 'Почему Crush?', href: 'AboutUs' },
+  { name: 'Преимущества', href: 'Info' },
+  { name: 'Ассортимент', href: 'Product' },
+  { name: 'Контакты', href: 'Social' },
 ]
 
 const mobileMenuOpen = ref(false)
