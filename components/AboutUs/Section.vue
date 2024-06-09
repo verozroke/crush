@@ -29,7 +29,7 @@
       >
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
-            <h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">Почему <span
+            <h1 class="title hidden1 mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">Почему <span
                 class="underline underline-offset-4 text-crush-pink"
               >crush</span>?</h1>
           </div>
@@ -39,7 +39,7 @@
         class="-ml-12 -mt-12 p-12 hidden lg:block lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
       >
         <img
-          class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl object-cover ring-1 ring-gray-400/10 sm:w-[57rem]"
+          class=" w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl object-cover ring-1 ring-gray-400/10 sm:w-[57rem]"
           src="~/assets/images/about-us.jpg"
           alt=""
         >
@@ -49,7 +49,7 @@
       >
         <div class="lg:pr-4">
           <div class="max-w-xl text-base lg:text-lg leading-7 text-white lg:max-w-lg">
-            <p class="leading-8 text-white">
+            <p class="leading-8 title hidden1 text-white">
               Если Вы заботитесь о своём здоровье, о качественном безопасном
               сексе, то презервативы CRUSH идеально подойдут Вам! Презервативы для мужчин тонкие изготовлены из
               высококачественного латекса с силиконовой смазкой. Почувствуйте нежность и комфорт, который обеспечит
@@ -59,22 +59,24 @@
             </p>
             <div class="lg:pr-4">
               <div class="lg:max-w-lg">
-                <h1 class="mt-14 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">Целевая аудитория</h1>
+                <h1 class="mt-14 title hidden1 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">Целевая
+                  аудитория</h1>
               </div>
             </div>
-            <p class="mt-8">
+            <p class="mt-8 title hidden1">
               Мужчины и женщины 16 - 35 лет, следящие за новинками, трендами, ведущие
               активный образ жизни, которые ценят надежность товаров-вещей и соотношение
               цена-качество.
             </p>
             <div class="lg:pr-4">
               <div class="lg:max-w-lg">
-                <h1 class="mt-14 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">Позиционирование
+                <h1 class="mt-14 title hidden1 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">
+                  Позиционирование
                   продукта
                 </h1>
               </div>
             </div>
-            <p class="mt-8">
+            <p class="mt-8 title hidden1">
               Молодежный, хайповый, трендовый, с заботой о базовых требованиях защищенного
               секса.
             </p>
@@ -89,7 +91,39 @@
   setup
   lang="ts"
 >
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
 
+setTimeout(() => {
+  // let hiddenSubtitleElements = document.querySelectorAll('.hero__subtitle.hidden')
+  let hiddenTitleElements = document.querySelectorAll('.title.hidden1')
+  let hiddenImageElements = document.querySelectorAll('.image.hidden1')
+  // let hiddenTextElements = document.querySelectorAll('.hero__text.hidden')
+  let hiddenElements = [...hiddenTitleElements, ...hiddenImageElements]
+  hiddenElements.forEach((hiddenElement) => {
+    observer.observe(hiddenElement)
+  })
+}, 0)
 </script>
 
-<style scoped></style>
+<style scoped>
+.title.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(0px) translateX(-200px);
+}
+
+.title.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+</style>

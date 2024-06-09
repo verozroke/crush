@@ -14,11 +14,12 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Конкурентные преимущества</p>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl subtitle hidden1">Конкурентные
+          преимущества</p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-        <div class="relative flex flex-col items-center pb-20">
-          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
+        <div class="relative flex flex-col items-center pb-20 subtitle hidden1">
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink ">
             <GlobeAltIcon class="h-6 w-6 text-white" />
           </div>
           <dt class="text-base font-semibold leading-7 text-center text-white">
@@ -30,7 +31,7 @@
           </dd>
         </div>
         <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-          <div class="relative pl-16">
+          <div class="relative pl-16 title hidden1">
             <dt class="text-base font-semibold leading-7 text-white">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
                 <ArrowPathIcon class="h-6 w-6 text-white" />
@@ -41,7 +42,7 @@
               Сделаны из натурального латекса. Гипоаллергенные, не сдавливают.
             </dd>
           </div>
-          <div class="relative pl-16">
+          <div class="relative pl-16 title2 hidden1">
             <dt class="text-base font-semibold leading-7 text-white">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
                 <PlusIcon class="h-6 w-6 text-white" />
@@ -53,7 +54,7 @@
               отсутствие дискомфорта.
             </dd>
           </div>
-          <div class="relative pl-16">
+          <div class="relative pl-16 title hidden1">
             <dt class="text-base font-semibold leading-7 text-white">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
                 <ScaleIcon class="h-6 w-6 text-white" />
@@ -66,7 +67,7 @@
               CRUSH - пахнут лучше!
             </dd>
           </div>
-          <div class="relative pl-16">
+          <div class="relative pl-16 title2 hidden1">
             <dt class="text-base font-semibold leading-7 text-white">
               <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
                 <ShieldCheckIcon class="h-6 w-6 text-white" />
@@ -91,6 +92,67 @@
 >
 import { ShieldCheckIcon, PlusIcon, ScaleIcon, ArrowPathIcon, GlobeAltIcon } from '@heroicons/vue/20/solid'
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+setTimeout(() => {
+  let hiddenTitleElements = document.querySelectorAll('.title.hidden1')
+  let hiddenTitle2Elements = document.querySelectorAll('.title2.hidden1')
+  let hiddenSubtitleImageElements = document.querySelectorAll('.subtitle.hidden1')
+  let hiddenElements = [...hiddenTitleElements, ...hiddenTitle2Elements, ...hiddenSubtitleImageElements,]
+  hiddenElements.forEach((hiddenElement) => {
+    observer.observe(hiddenElement)
+  })
+}, 0)
+
 </script>
 
-<style scoped></style>
+<style scoped>
+.subtitle.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(200px);
+}
+
+.subtitle.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+
+.title.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(0px) translateX(-200px);
+}
+
+.title.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+
+.title2.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(0px) translateX(200px);
+}
+
+.title2.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+</style>

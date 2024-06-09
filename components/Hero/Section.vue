@@ -16,7 +16,7 @@
       <div class="text-center">
         <a
           href="#"
-          class="m-6 h-24 flex justify-center"
+          class="title hidden1 m-6 h-24 flex justify-center"
         >
           <span class="sr-only">Crush</span>
           <img
@@ -25,13 +25,13 @@
             alt=""
           />
         </a>
-        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+        <h1 class="subtitle hidden1  text-4xl font-bold tracking-tight text-white sm:text-6xl">
           {{ $t('hero.slogan') }}
         </h1>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <button
             type="submit"
-            class="gap-2 items-center font-semibold leading-6 text-base flex justify-center rounded-md border border-transparent bg-crush-pink px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            class="button hidden1 gap-2 items-center font-semibold leading-6 text-base flex justify-center rounded-md border border-transparent bg-crush-pink px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >{{ $t('hero.buy') }}
             <CreditCardIcon class="h-5 w-5" />
           </button>
@@ -56,6 +56,67 @@
 >
 import { CreditCardIcon } from '@heroicons/vue/20/solid'
 
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+setTimeout(() => {
+  // let hiddenSubtitleElements = document.querySelectorAll('.hero__subtitle.hidden')
+  let hiddenTitleElements = document.querySelectorAll('.title.hidden1')
+  let hiddenSubtitleElements = document.querySelectorAll('.subtitle.hidden1')
+  let hiddenButtonElements = document.querySelectorAll('.button.hidden1')
+  // let hiddenTextElements = document.querySelectorAll('.hero__text.hidden')
+  let hiddenElements = [...hiddenTitleElements, ...hiddenSubtitleElements, ...hiddenButtonElements]
+  hiddenElements.forEach((hiddenElement) => {
+    observer.observe(hiddenElement)
+  })
+}, 0)
 </script>
 
-<style scoped></style>
+<style scoped>
+.title.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(200px);
+}
+
+.title.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.subtitle.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(200px);
+}
+
+.subtitle.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.button.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(200px);
+}
+
+.button.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+</style>

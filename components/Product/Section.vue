@@ -27,12 +27,14 @@
       ></div>
     </div>
     <div class="mx-auto mb-16 text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ассортимент товаров</h2>
-      <p class="mt-2 text-lg leading-8 font-medium text-crush-pink">Здесь вы можете увидеть наши товары.</p>
+      <h2 class="subtitle hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl">Ассортимент товаров</h2>
+      <p class="subtitle hidden1 mt-2 text-lg leading-8 font-medium text-crush-pink">Здесь вы можете увидеть наши
+        товары.</p>
     </div>
 
     <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 xl:gap-x-8">
       <ProductItem
+        class="subtitle hidden1"
         v-for="product in products"
         :key="product.id"
         :product
@@ -52,6 +54,38 @@ import productsData from '~/assets/data/products.json'
 
 const products = ref<Product[]>(productsData)
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+setTimeout(() => {
+  let hiddenTitleElements = document.querySelectorAll('.subtitle.hidden1')
+  let hiddenElements = [...hiddenTitleElements,]
+  hiddenElements.forEach((hiddenElement) => {
+    observer.observe(hiddenElement)
+  })
+}, 0)
+
+
 </script>
 
-<style scoped></style>
+<style scoped>
+.subtitle.hidden1 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(20px);
+  transform: translateY(200px);
+}
+
+.subtitle.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+</style>
