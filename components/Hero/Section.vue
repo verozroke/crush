@@ -23,14 +23,13 @@
           />
         </a>
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-          Find your
-          <div class="text-crush-pink">crush</div>
+          {{ $t('hero.slogan') }}
         </h1>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <button
             type="submit"
             class="gap-2 items-center font-semibold leading-6 text-base flex justify-center rounded-md border border-transparent bg-crush-pink px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >Купить сейчас
+          >{{ $t('hero.buy') }}
             <CreditCardIcon class="h-5 w-5" />
           </button>
         </div>
