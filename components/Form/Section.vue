@@ -1,5 +1,5 @@
 <template>
-  <div class="isolate py-10">
+  <div class="relative isolate py-10">
     <div
       class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true"
@@ -20,11 +20,11 @@
       class="mx-auto mt-16 max-w-xl sm:mt-20"
     >
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
+        <div class="sm:col-span-2">
           <label
             for="first-name"
             class="block text-sm font-medium leading-6 text-white"
-          >Ваше имя</label>
+          >Ваше ФИО</label>
           <div class="mt-2.5">
             <input
               v-model="name"
@@ -32,24 +32,7 @@
               name="first-name"
               id="first-name"
               autocomplete="given-name"
-              placeholder="Введите ваше имя."
-              class="block w-full rounded-md border-0 px-3.5 py-2 text-darkblue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            >
-          </div>
-        </div>
-        <div>
-          <label
-            for="last-name"
-            class="block text-sm font-medium leading-6 text-white"
-          >Ваша фамилия</label>
-          <div class="mt-2.5">
-            <input
-              v-model="surname"
-              type="text"
-              name="last-name"
-              id="last-name"
-              autocomplete="family-name"
-              placeholder="Введите вашу фамилию."
+              placeholder="Введите ваше ФИО."
               class="block w-full rounded-md border-0 px-3.5 py-2 text-darkblue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             >
           </div>
@@ -88,6 +71,21 @@
             >
           </div>
         </div>
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block text-sm font-medium leading-6 text-white"
+          >Ваш запрос</label>
+          <div class="mt-2.5">
+            <textarea
+              v-model="message"
+              name="message"
+              id="message"
+              rows="4"
+              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            ></textarea>
+          </div>
+        </div>
       </div>
       <div class="mt-10">
         <button
@@ -110,20 +108,20 @@ import { PhoneXMarkIcon } from '@heroicons/vue/20/solid'
 import axios from 'axios';
 
 const name = ref('')
-const surname = ref('')
 const phone = ref('')
 const email = ref('')
+const message = ref('')
 
 const clear = () => {
   name.value = ''
-  surname.value = ''
   phone.value = ''
   email.value = ''
+  message.value = ''
 }
 
 const sendToSheets = async (e: any) => {
   e.preventDefault()
-  if (!name.value || !surname.value || !phone.value || !email.value) {
+  if (!name.value || !message.value || !phone.value || !email.value) {
     alert('Поля не должны быть пустыми.')
     return
   }
@@ -139,10 +137,11 @@ const sendToSheets = async (e: any) => {
   }
 
   try {
-    const { data } = await axios.postForm('https://script.google.com/macros/s/AKfycbzZO9SjmBWydxMTr0qIq7lccxogHERirMWMPqv3x4XmcZSW4RKe5PwOhVnjiEQCtsTgdQ/exec', {
-      fullName: name.value + ' ' + surname.value,
+    const { data } = await axios.postForm('https://script.google.com/macros/s/AKfycbyhIi5Or0jKmsWWV7dCTHOa12-kMHnS5jvZiwRTTgHKLIHlwQTux47Zh360HirC1-i44Q/exec', {
+      fullName: name.value,
       phone: phone.value,
-      email: email.value
+      email: email.value,
+      message: message.value
     })
 
     // on success
