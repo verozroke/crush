@@ -1,7 +1,7 @@
 <template>
   <div class="relative isolate py-10">
     <div
-      class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+      class="absolute inset-x-0 top-[10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[20rem]"
       aria-hidden="true"
     >
       <div
