@@ -20,34 +20,43 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
         <div class="max-w-xl lg:max-w-lg text-gray-300">
-          <h2 class="title hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-5">Наши социальные сети и
-            контакты.
+          <h2 class="title hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-5">Мы в социальных сетях
           </h2>
-          <div class="title hidden1 flex items-center gap-2"><b>Instagram: </b> <a
-              target="_blank"
-              class="hover:underline underline-offset-2"
-              href="https://www.instagram.com/crush.kz.official?igsh=anoyNWhxOHRyanFw"
-            >@crush.kz.official</a></div>
-          <div class="title hidden1 flex items-center gap-2"><b>Tiktok: </b> <a
-              target="_blank"
-              class="hover:underline underline-offset-2"
-              href="https://www.tiktok.com/@crush.kz?_t=8n21YxBKBgY&_r=1"
-            >@crush.kz</a></div>
+          <div class="flex items-center gap-2">
+            <div class="title hidden1 flex items-center gap-2"><a
+                target="_blank"
+                href="https://www.instagram.com/crush.kz.official?igsh=anoyNWhxOHRyanFw"
+              >
+                <img
+                  src="~/assets/images/insta.webp"
+                  class="h-8 w-8 object-cover"
+                  alt=""
+                >
+              </a></div>
+            <div class="title hidden1 flex items-center gap-2"><a
+                target="_blank"
+                href="https://www.tiktok.com/@crush.kz?_t=8n21YxBKBgY&_r=1"
+              >
+                <img
+                  src="~/assets/images/tiktok.png"
+                  class="h-8 w-auto"
+                  alt=""
+                >
+              </a></div>
+          </div>
         </div>
         <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
           <div class="flex flex-col items-start">
             <div class="title2 hidden1 rounded-md bg-white/5 p-2 ring-1 ring-white/10">
               <PhoneIcon class="h-6 w-6 text-white" />
             </div>
-            <dt class="title2 hidden1 mt-4 font-semibold text-white">Номер телефона</dt>
-            <dd class="title2 hidden1 mt-2 leading-7 text-white">Наш номер связи: <b>+7-777-000-88-07</b></dd>
+            <dd class="title2 hidden1 mt-2 leading-7 text-white"><b>+7-777-000-88-07</b></dd>
           </div>
           <div class="flex flex-col items-start">
             <div class=" title2 hidden1 rounded-md bg-white/5 p-2 ring-1 ring-white/10">
               <EnvelopeIcon class="h-6 w-6 text-white" />
             </div>
-            <dt class="title2 hidden1 mt-4 font-semibold text-white">Email</dt>
-            <dd class="title2 hidden1 mt-2 leading-7 text-white">Наша электронная почта: <b>info@crush.kz</b></dd>
+            <dd class="title2 hidden1 mt-2 leading-7 text-white"><b>info@crush.kz</b></dd>
           </div>
         </dl>
       </div>

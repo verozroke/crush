@@ -4,9 +4,9 @@
     class="relative isolate py-10"
   >
     <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Обратная связь</h2>
-      <p class="mt-2 text-lg leading-8 font-medium text-crush-pink">Оставьте нам ваши контактные данные и мы свяжемся с
-        вами!.</p>
+      <p class="mt-2 text-lg leading-8 font-medium text-crush-pink">Если у вас есть дополнительные вопросы, напишите
+        нам.
+      </p>
     </div>
     <form
       action="#"
@@ -85,7 +85,7 @@
         <button
           @click="sendToSheets"
           class="gap-2 items-center font-semibold leading-6 w-full text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >Связаться
+        >Отправить
           <PhoneXMarkIcon class="h-4 w-4" />
         </button>
       </div>

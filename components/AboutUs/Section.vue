@@ -29,9 +29,19 @@
       >
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
-            <h1 class="title hidden1 mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">Почему <span
-                class="underline underline-offset-4 text-crush-pink"
-              >crush</span>?</h1>
+            <h1
+              class="title hidden1 mt-2 text-3xl font-bold tracking-tight flex items-center gap-2 text-white sm:text-5xl"
+            >
+              <span>Почему</span> <a href="#">
+                <span class="sr-only">Crush</span>
+                <img
+                  class="h-11  object-cover"
+                  src="~/assets/images/logo.png"
+                  alt=""
+                />
+              </a>
+              <span>?</span>
+            </h1>
           </div>
         </div>
       </div>
@@ -56,29 +66,6 @@
               безопасный половой акт.
               Каждый этап создания презерватива контролируется и тестируется электроникой
               и выборочной ручной проверкой для защиты, защищены от сдавливания фольгой.
-            </p>
-            <div class="lg:pr-4">
-              <div class="lg:max-w-lg">
-                <h1 class="mt-14 title hidden1 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">Целевая
-                  аудитория</h1>
-              </div>
-            </div>
-            <p class="mt-8 title hidden1">
-              Мужчины и женщины 16 - 35 лет, следящие за новинками, трендами, ведущие
-              активный образ жизни, которые ценят надежность товаров-вещей и соотношение
-              цена-качество.
-            </p>
-            <div class="lg:pr-4">
-              <div class="lg:max-w-lg">
-                <h1 class="mt-14 title hidden1 text-3xl font-bold tracking-tight text-crush-pink sm:text-4xl">
-                  Позиционирование
-                  продукта
-                </h1>
-              </div>
-            </div>
-            <p class="mt-8 title hidden1">
-              Молодежный, хайповый, трендовый, с заботой о базовых требованиях защищенного
-              секса.
             </p>
           </div>
         </div>

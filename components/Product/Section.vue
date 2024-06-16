@@ -78,7 +78,7 @@ setTimeout(() => {
 <style scoped>
 .subtitle.hidden1 {
   opacity: 0;
-  transition: all 1s;
+  transition: all 2s;
   filter: blur(20px);
   transform: translateY(200px);
 }
