@@ -19,10 +19,14 @@
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
         <div class="relative flex flex-col items-center pb-20 subtitle hidden1">
-          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink ">
-            <GlobeAltIcon class="h-6 w-6 text-white" />
+          <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-darkblue ">
+            <img
+              class="h-6 w-6 text-white"
+              src="~/assets/images/icons/global.png"
+              alt=""
+            >
           </div>
-          <dt class="text-base font-semibold leading-7 text-center text-white">
+          <dt class="text-base font-semibold leading-7 text-center text-crush-pink">
             Максимальная безопасность и
             защита
           </dt>
@@ -32,9 +36,13 @@
         </div>
         <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           <div class="relative pl-16 title hidden1">
-            <dt class="text-base font-semibold leading-7 text-white">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
-                <ArrowPathIcon class="h-6 w-6 text-white" />
+            <dt class="text-base font-semibold leading-7 text-crush-pink">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-darkblue">
+                <img
+                  class="h-6 w-6 text-white"
+                  src="~/assets/images/icons/latex.png"
+                  alt=""
+                >
               </div>
               Натуральный латекс
             </dt>
@@ -43,9 +51,13 @@
             </dd>
           </div>
           <div class="relative pl-16 title2 hidden1">
-            <dt class="text-base font-semibold leading-7 text-white">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
-                <PlusIcon class="h-6 w-6 text-white" />
+            <dt class="text-base font-semibold leading-7 text-crush-pink">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-darkblue">
+                <img
+                  class="h-6 w-6 text-white"
+                  src="~/assets/images/icons/gel.png"
+                  alt=""
+                >
               </div>
               С гелем-смазкой
             </dt>
@@ -55,9 +67,13 @@
             </dd>
           </div>
           <div class="relative pl-16 title hidden1">
-            <dt class="text-base font-semibold leading-7 text-white">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
-                <ScaleIcon class="h-6 w-6 text-white" />
+            <dt class="text-base font-semibold leading-7 text-crush-pink">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-darkblue">
+                <img
+                  class="h-6 w-6 text-white"
+                  src="~/assets/images/icons/smell.png"
+                  alt=""
+                >
               </div>
               Без неприятного запаха
             </dt>
@@ -68,9 +84,13 @@
             </dd>
           </div>
           <div class="relative pl-16 title2 hidden1">
-            <dt class="text-base font-semibold leading-7 text-white">
-              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-crush-pink">
-                <ShieldCheckIcon class="h-6 w-6 text-white" />
+            <dt class="text-base font-semibold leading-7 text-crush-pink">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-darkblue">
+                <img
+                  class="h-6 w-6 text-white"
+                  src="~/assets/images/icons/secure.png"
+                  alt=""
+                >
               </div>
               Максимальная безопасность и
               защита

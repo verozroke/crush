@@ -43,6 +43,26 @@
                   alt=""
                 >
               </a></div>
+            <div class="title hidden1 flex items-center gap-2"><a
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=61560217664459"
+              >
+                <img
+                  src="~/assets/images/facebook.webp"
+                  class="h-8 w-auto"
+                  alt=""
+                >
+              </a></div>
+            <div class="title hidden1 flex items-center gap-2"><a
+                target="_blank"
+                href="https://youtube.com/@crush.kz.official?si=IrEtls0NLKk4JdDF"
+              >
+                <img
+                  src="~/assets/images/youtube.webp"
+                  class="h-8 w-auto"
+                  alt=""
+                >
+              </a></div>
           </div>
         </div>
         <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">

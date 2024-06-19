@@ -1,7 +1,7 @@
 <template>
   <div
     id="AboutUs"
-    class="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+    class="relative isolate  px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
   >
     <div
       class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
@@ -30,7 +30,7 @@
         <div class="lg:pr-4">
           <div class="lg:max-w-lg">
             <h1
-              class="title hidden1 mt-2 text-3xl font-bold tracking-tight flex items-center gap-2 text-white sm:text-5xl"
+              class="title hidden1 mt-2 text-3xl font-bold tracking-tight flex flex-wrap items-center gap-2 text-white sm:text-5xl"
             >
               <span>Почему</span> <a href="#">
                 <span class="sr-only">Crush</span>
