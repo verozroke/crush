@@ -29,7 +29,6 @@
     <div class="mx-auto mb-16 text-center">
       <h2 class="subtitle hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $t('product.title') }}
       </h2>
-      <p class="subtitle hidden1 mt-2 text-lg leading-8 font-medium text-crush-pink">{{ $t('product.subtitle') }}</p>
     </div>
 
     <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 xl:gap-x-8">
