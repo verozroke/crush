@@ -27,9 +27,9 @@
       ></div>
     </div>
     <div class="mx-auto mb-16 text-center">
-      <h2 class="subtitle hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl">Ассортимент товаров</h2>
-      <p class="subtitle hidden1 mt-2 text-lg leading-8 font-medium text-crush-pink">Здесь вы можете увидеть наши
-        товары.</p>
+      <h2 class="subtitle hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ $t('product.title') }}
+      </h2>
+      <p class="subtitle hidden1 mt-2 text-lg leading-8 font-medium text-crush-pink">{{ $t('product.subtitle') }}</p>
     </div>
 
     <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 xl:gap-x-8">
@@ -51,8 +51,80 @@
 import type { Product } from '~/types/product'
 import productsData from '~/assets/data/products.json'
 
+const { t } = useI18n()
 
-const products = ref<Product[]>(productsData)
+const products = computed<Product[]>(() => [
+  {
+    "id": 1,
+    "name": "Crush Classic",
+    "type": t('product.products.classic'),
+    "price": "3 " + t('shtuk'),
+    "image": "crush-classic-3.png"
+  },
+  {
+    "id": 2,
+    "name": "Crush Dotted",
+    "type": t('product.products.dotted'),
+    "price": "3 " + t('shtuk'),
+    "image": "crush-dotted-3.png"
+  },
+  {
+    "id": 3,
+    "name": "Crush Ultra",
+    "type": t('product.products.ultra'),
+    "price": "3 " + t('shtuk'),
+    "image": "crush-ultra-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Crush Long Time",
+    "type": t('product.products.long-time'),
+    "price": "3 " + t('shtuk'),
+    "image": "crush-longtime-3.png"
+  },
+  {
+    "id": 5,
+    "name": "Crush Ribbed",
+    "type": t('product.products.ribbed'),
+    "price": "3 " + t('shtuk'),
+    "image": "crush-ribbed-3.png"
+  },
+  {
+    "id": 6,
+    "name": "Crush Classic",
+    "type": t('product.products.classic'),
+    "price": "12 " + t('shtuk'),
+    "image": "crush-classic-12.png"
+  },
+  {
+    "id": 7,
+    "name": "Crush Dotted",
+    "type": t('product.products.dotted'),
+    "price": "12 " + t('shtuk'),
+    "image": "crush-dotted-12.png"
+  },
+  {
+    "id": 8,
+    "name": "Crush Ultra",
+    "type": t('product.products.ultra'),
+    "price": "12 " + t('shtuk'),
+    "image": "crush-ultra-12.png"
+  },
+  {
+    "id": 9,
+    "name": "Crush Long Time",
+    "type": t('product.products.long-time'),
+    "price": "12 " + t('shtuk'),
+    "image": "crush-longtime-12.png"
+  },
+  {
+    "id": 10,
+    "name": "Crush Ribbed",
+    "type": t('product.products.ribbed'),
+    "price": "12 " + t('shtuk'),
+    "image": "crush-ribbed-12.png"
+  }
+])
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

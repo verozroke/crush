@@ -20,7 +20,8 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
         <div class="max-w-xl lg:max-w-lg text-gray-300">
-          <h2 class="title hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-5">Мы в социальных сетях
+          <h2 class="title hidden1 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-5">{{ $t('social.title')
+            }}
           </h2>
           <div class="flex items-center gap-2">
             <div class="title hidden1 flex items-center gap-2"><a

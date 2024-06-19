@@ -19,6 +19,7 @@
   lang="ts"
 >
 
+const { t } = useI18n()
 
 
 function scrollDown(blockID: string) {
@@ -29,13 +30,14 @@ function scrollDown(blockID: string) {
   })
 }
 
-const navigation = [
-  { name: 'Главная', href: 'Hero' },
-  { name: 'Почему Crush?', href: 'AboutUs' },
-  { name: 'Преимущества', href: 'Info' },
-  { name: 'Ассортимент', href: 'Product' },
-  { name: 'Контакты', href: 'Social' },
-]
+const navigation = computed(() => [
+  { name: t('header.home'), href: 'Hero' },
+  { name: t('header.about_us'), href: 'AboutUs' },
+  { name: t('header.info'), href: 'Info' },
+  { name: t('header.product'), href: 'Product' },
+  { name: t('header.social'), href: 'Social' },
+])
+
 </script>
 
 <style scoped></style>

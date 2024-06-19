@@ -42,7 +42,7 @@
         <button
           @click="scrollDown('Form')"
           class="gap-2 items-center font-semibold leading-6 text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >Связаться
+        >{{ $t('contact') }}
           <PhoneXMarkIcon class="h-4 w-4" />
         </button>
       </div>
@@ -101,7 +101,7 @@
             scrollDown('Form')
           }"
                 class="gap-2 items-center font-semibold leading-6 w-full text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >Связаться
+              >{{ $t('contact') }}
                 <PhoneXMarkIcon class="h-4 w-4" />
               </button>
             </div>
@@ -130,13 +130,15 @@ function scrollDown(blockID: string) {
   })
 }
 
-const navigation = [
-  { name: 'Главная', href: 'Hero' },
-  { name: 'Почему Crush?', href: 'AboutUs' },
-  { name: 'Преимущества', href: 'Info' },
-  { name: 'Ассортимент', href: 'Product' },
-  { name: 'Контакты', href: 'Social' },
-]
+const { t } = useI18n()
+
+const navigation = computed(() => [
+  { name: t('header.home'), href: 'Hero' },
+  { name: t('header.about_us'), href: 'AboutUs' },
+  { name: t('header.info'), href: 'Info' },
+  { name: t('header.product'), href: 'Product' },
+  { name: t('header.social'), href: 'Social' },
+])
 
 const mobileMenuOpen = ref(false)
 </script>

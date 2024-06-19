@@ -32,7 +32,7 @@
             <h1
               class="title hidden1 mt-2 text-3xl font-bold tracking-tight flex flex-wrap items-center gap-2 text-white sm:text-5xl"
             >
-              <span>Почему</span> <a href="#">
+              <span>{{ $t('about_us.title') }}</span> <a href="#">
                 <span class="sr-only">Crush</span>
                 <img
                   class="h-11  object-cover"
@@ -60,12 +60,7 @@
         <div class="lg:pr-4">
           <div class="max-w-xl text-base lg:text-lg leading-7 text-white lg:max-w-lg">
             <p class="leading-8 title hidden1 text-white">
-              Если Вы заботитесь о своём здоровье, о качественном безопасном
-              сексе, то презервативы CRUSH идеально подойдут Вам! Презервативы для мужчин тонкие изготовлены из
-              высококачественного латекса с силиконовой смазкой. Почувствуйте нежность и комфорт, который обеспечит
-              безопасный половой акт.
-              Каждый этап создания презерватива контролируется и тестируется электроникой
-              и выборочной ручной проверкой для защиты, защищены от сдавливания фольгой.
+              {{ $t('about_us.description') }}
             </p>
           </div>
         </div>

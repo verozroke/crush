@@ -4,8 +4,7 @@
     class="relative isolate py-10"
   >
     <div class="mx-auto max-w-2xl text-center">
-      <p class="mt-2 text-lg leading-8 font-medium text-crush-pink">Если у вас есть дополнительные вопросы, напишите
-        нам.
+      <p class="mt-2 text-lg leading-8 font-medium text-crush-pink">{{ $t('form.title') }}
       </p>
     </div>
     <form
@@ -18,7 +17,7 @@
           <label
             for="first-name"
             class="block text-sm font-medium leading-6 text-white"
-          >Ваше ФИО</label>
+          >{{ $t('form.name') }}</label>
           <div class="mt-2.5">
             <input
               v-model="name"
@@ -52,7 +51,7 @@
           <label
             for="phone-number"
             class="block text-sm font-medium leading-6 text-white"
-          >Номер телефона</label>
+          >{{ $t('form.phone') }}</label>
           <div class="relative mt-2.5">
             <input
               v-model="phone"
@@ -69,7 +68,7 @@
           <label
             for="message"
             class="block text-sm font-medium leading-6 text-white"
-          >Ваш запрос</label>
+          >{{ $t('form.text') }}</label>
           <div class="mt-2.5">
             <textarea
               v-model="message"
@@ -85,7 +84,7 @@
         <button
           @click="sendToSheets"
           class="gap-2 items-center font-semibold leading-6 w-full text-sm flex justify-center rounded-md border border-transparent bg-crush-pink px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >Отправить
+        >{{ $t('form.send') }}
           <PhoneXMarkIcon class="h-4 w-4" />
         </button>
       </div>
