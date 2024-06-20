@@ -34,7 +34,7 @@
         <a
           v-for="item in navigation"
           :key="item.name"
-          class="text-sm font-medium leading-6 text-white"
+          class="text-sm font-medium cursor-pointer leading-6 text-white"
           @click="scrollDown(item.href)"
         >{{ item.name }}</a>
       </div>
