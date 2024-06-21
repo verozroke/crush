@@ -31,7 +31,8 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <button
             type="submit"
-            class="button hidden1 gap-2 items-center font-semibold leading-6 text-base flex justify-center rounded-md border border-transparent bg-crush-pink px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            @click="goTo('https://kaspi.kz/shop/search/?text=%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%B8%D0%B2%D1%8B%20Crush&q=%3AavailableInZones%3AMagnum_ZONE1%3Acategory%3ACondoms%3AmanufacturerName%3ACrush&sort=relevance&filteredByCategory=false&sc=')"
+            class="button hidden1 z-20 gap-2 items-center font-semibold leading-6 text-base flex justify-center rounded-md border border-transparent bg-crush-pink px-5 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >{{ $t('hero.buy') }}
             <CreditCardIcon class="h-5 w-5" />
           </button>
@@ -66,6 +67,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   })
 })
+
 
 setTimeout(() => {
   // let hiddenSubtitleElements = document.querySelectorAll('.hero__subtitle.hidden')

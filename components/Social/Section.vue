@@ -24,7 +24,7 @@
             }}
           </h2>
           <div class="flex items-center gap-2">
-            <div class="title hidden1 flex items-center gap-2"><a
+            <div class="flex items-center gap-2"><a
                 target="_blank"
                 href="https://www.instagram.com/crush.kz.official?igsh=anoyNWhxOHRyanFw"
               >
@@ -34,7 +34,7 @@
                   alt=""
                 >
               </a></div>
-            <div class="title hidden1 flex items-center gap-2"><a
+            <div class="flex items-center gap-2"><a
                 target="_blank"
                 href="https://www.tiktok.com/@crush.kz?_t=8n21YxBKBgY&_r=1"
               >
@@ -44,7 +44,7 @@
                   alt=""
                 >
               </a></div>
-            <div class="title hidden1 flex items-center gap-2"><a
+            <div class="flex items-center gap-2"><a
                 target="_blank"
                 href="https://www.facebook.com/profile.php?id=61560217664459"
               >
@@ -54,7 +54,7 @@
                   alt=""
                 >
               </a></div>
-            <div class="title hidden1 flex items-center gap-2"><a
+            <div class="flex items-center gap-2"><a
                 target="_blank"
                 href="https://youtube.com/@crush.kz.official?si=IrEtls0NLKk4JdDF"
               >
