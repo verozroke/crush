@@ -10,7 +10,12 @@
       >{{ item.name }}</a>
     </nav>
 
-    <p class="text-center text-white font-medium">&copy; 2024 Crush. Все права защищены.</p>
+    <p class="text-center text-white font-medium">ТОО ФАРМАКОМ БИН 980940004651. Все права защищены.</p>
+    <NuxtImg
+      src="/cert.png"
+      @click="openCertificate"
+      class="w-40 opacity-50 mx-auto hover:opacity-100 hover:scale-110 transition-all"
+    />
   </footer>
 </template>
 
@@ -21,6 +26,12 @@
 
 const { t } = useI18n()
 
+const openCertificate = () => {
+  const link = document.createElement('a')
+  link.href = '/cert.png'
+  link.target = "_blank"
+  link.click()
+}
 
 function scrollDown(blockID: string) {
   const $block = document.getElementById(blockID) ?? document.createElement('div')
