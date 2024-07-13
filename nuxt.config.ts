@@ -6,19 +6,6 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/png', href: '/logo.png' }
       ],
-      script: [
-        {
-          async: true,
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-LJX411RP4T'
-        },
-        {
-          children: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-LJX411RP4T');
-          `}
-      ]
     }
   },
   devtools: { enabled: true },
@@ -33,5 +20,8 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n/i18n.config.ts' // if you are using custom path, default
   },
-  modules: ["@nuxtjs/i18n", "@nuxt/image"]
+  gtag: {
+    id: 'G-LJX411RP4T'
+  },
+  modules: ["@nuxtjs/i18n", "@nuxt/image", "nuxt-gtag"]
 })
