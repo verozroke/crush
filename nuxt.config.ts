@@ -9,14 +9,14 @@ export default defineNuxtConfig({
       script: [
         {
           async: true,
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-DCMEQXZZWX'
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-LJX411RP4T'
         },
         {
           children: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-DCMEQXZZWX');
+            gtag('config', 'G-LJX411RP4T');
           `}
       ]
     }
