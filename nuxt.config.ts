@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     vueI18n: './i18n/i18n.config.ts' // if you are using custom path, default
   },
   gtag: {
-    id: 'G-LJX411RP4T'
+    id: 'GTM-KRZNZJBN'
   },
   modules: ["@nuxtjs/i18n", "@nuxt/image", "nuxt-gtag"]
 })
