@@ -3,12 +3,12 @@
     <HeroSection />
     <AboutUsSection />
     <InfoSection />
-    <div class="image hidden1 new-text  mt-20 flex justify-center items-center">
+    <!-- <div class="image hidden1 new-text  mt-20 flex justify-center items-center">
       <span
         class="border-2 border-white text-5xl rounded-full text-white px-6 py-2 font-bold"
         style="background-color: #FF00FF;"
       >НОВИНКА!</span>
-    </div>
+    </div> -->
     <NewProductSection />
     <ProductSection />
     <SocialSection />

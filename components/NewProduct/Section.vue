@@ -24,7 +24,7 @@
     <div class="mx-auto text-center lg:text-left flex flex-col lg:flex-row items-center justify-between">
       <div class="w-full flex flex-col ">
         <h1
-          class="title2 hidden2 mt-2 text-3xl font-bold tracking-tight flex justify-center lg:justify-start lg:flex-wrap items-center gap-2 text-white sm:text-5xl"
+          class="title2 hidden2 mt-2 text-3xl font-bold tracking-tight flex lg:flex-row flex-col justify-center lg:justify-start lg:flex-wrap items-center gap-2 text-white sm:text-5xl"
         >
           <a href="#">
             <span class="sr-only">Crush</span>
@@ -34,17 +34,16 @@
               alt=""
             />
           </a>
-          <span>Cooling</span>
+          <span>{{ $t('new.cool.title') }}</span>
         </h1>
         <h2 class="title2 hidden2 mt-2 text-xl font-bold tracking-tight text-sky-400 sm:text-3xl">
-          Охлаждающий эффект 🧊
+
         </h2>
-        <div class="mt-6">
+        <div class="mt-6 flex justify-center lg:block ">
           <div class="max-w-xl text-lg leading-7 text-white">
-            <p class="title2 hidden2 leading-8  text-white">
-              Crush Cooling дарит лёгкое освежающее покалывание, которое усиливает возбуждение и делает каждое
-              прикосновение ярче. <br>
-              Идеален для пар, которые любят новые ощущения и хотят добавить динамики в близость.
+            <p class="title2 hidden2 leading-8   text-white">
+              {{ $t('new.cool.about1') }} <br>
+              {{ $t('new.cool.about2') }}
             </p>
           </div>
         </div>
@@ -53,44 +52,33 @@
             type="disc"
             class="list-disc list-inside"
           >
-            <li>Охлаждающий эффект, усиливающий чувствительность</li>
-            <li>Длительная смазка и комфорт</li>
-            <li>Нежная текстура, легко смывается</li>
-            <li>Без спирта и липкости</li>
-            <li>Совместим с презервативами</li>
+            <li>{{ $t('new.cool.l1') }}</li>
+            <li>{{ $t('new.cool.l2') }}</li>
+            <li>{{ $t('new.cool.l3') }}</li>
+            <li>{{ $t('new.cool.l4') }}</li>
+            <li>{{ $t('new.cool.l5') }}</li>
           </ul>
         </h2>
       </div>
       <div class="image2 hidden1 relative flex-row h-fit items-end">
         <img
-          class="absolute bottom-[-10px] left-[-100px] w-[300px] max-w-[300px] object-cover"
-          src="~/assets/images/new/cool-50.png"
-          alt=""
-        >
-        <img
-          class=" w-[400px] max-w-[400px] object-cover"
-          src="~/assets/images/new/cool-100.png"
+          class="w-[400px] max-w-[400px] object-cover"
+          src="~/assets/images/new/cool.png"
           alt=""
         >
       </div>
     </div>
     <div class="mx-auto mt-20 flex flex-col lg:flex-row items-center justify-between">
-      <div class="image hidden1 hidden lg:flex relative w-full h-fit items-end">
+      <div class="image hidden1 hidden lg:flex w-full h-fit items-end">
         <img
           class="w-[400px] max-w-[400px] object-cover"
-          src="~/assets/images/new/aloe-100.png"
+          src="~/assets/images/new/aloe.png"
           alt=""
         >
-        <img
-          class="absolute bottom-[-5px] right-[100px] lg:right-[200px] w-[300px] max-w-[300px] object-cover"
-          src="~/assets/images/new/aloe-50.png"
-          alt=""
-        >
-
       </div>
       <div class="w-full text-center lg:text-right flex flex-col ">
         <h1
-          class="title2 hidden2 mt-2 text-3xl font-bold tracking-tight flex justify-center lg:justify-end lg:flex-wrap items-center gap-2 text-white sm:text-5xl"
+          class="title2 hidden2 mt-2 text-3xl font-bold tracking-tight flex lg:flex-row flex-col justify-center lg:justify-end lg:flex-wrap items-center gap-2 text-white sm:text-5xl"
         >
           <a href="#">
             <span class="sr-only">Crush</span>
@@ -100,45 +88,38 @@
               alt=""
             />
           </a>
-          <span>Aloe</span>
+          <span>Алоэ Вера</span>
         </h1>
-        <h2 class="title hidden1 mt-2 text-xl font-bold tracking-tight text-lime-400 sm:text-3xl">
-          Натуральная нежность и Забота 🌿
-        </h2>
+        <!-- <h2 class="title hidden1 mt-2 text-xl font-bold tracking-tight text-lime-400 sm:text-3xl">
+          Натуральная нежность и Забота
+        </h2> -->
         <div class="title hidden1 mt-6">
           <div class="text-lg leading-7 text-white">
             <p class="leading-8  text-white">
-              Гель-лубрикант на основе натурального алоэ вера обладает успокаивающими и увлажняющими свойствами. <br>
-              Идеально подходит людям с чувствительной кожей и тем, кто предпочитает мягкое натуральное увлажнение.
+              {{ $t('new.aloe.about1') }} <br>
+              {{ $t('new.aloe.about2') }}
             </p>
           </div>
         </div>
         <h2 class="mt-10 text-lg font-bold tracking-tight text-white ">
           <ul
-            dir="rtl"
+            id="strange-ul"
             type="disc"
             class="title hidden1 list-disc list-inside"
           >
-            <li>Охлаждающий эффект, усиливающий чувствительность</li>
-            <li>Длительная смазка и комфорт</li>
-            <li>Нежная текстура, легко смывается</li>
-            <li>Без спирта и липкости</li>
-            <li>Совместим с презервативами</li>
+            <li>{{ $t('new.aloe.l1') }}</li>
+            <li>{{ $t('new.aloe.l2') }}</li>
+            <li>{{ $t('new.aloe.l3') }}</li>
+            <li>{{ $t('new.aloe.l4') }}</li>
+            <li>{{ $t('new.aloe.l5') }}</li>
           </ul>
         </h2>
       </div>
-      <div class="image hidden1 flex lg:hidden relative w-full h-fit items-end">
+      <div class="image hidden1 flex lg:hidden lg:justify-normal justify-center w-full h-fit items-end">
         <img
           class="w-[400px] max-w-[400px] object-cover"
-          src="~/assets/images/new/aloe-100.png"
-          alt=""
+          src="~/assets/images/new/aloe.png"
         >
-        <img
-          class="absolute bottom-[-5px] right-[100px] lg:right-[200px] w-[300px] max-w-[300px] object-cover"
-          src="~/assets/images/new/aloe-50.png"
-          alt=""
-        >
-
       </div>
     </div>
   </div>
@@ -224,5 +205,17 @@ setTimeout(() => {
   filter: blur(0);
   opacity: 1;
   transform: translateY(0) translateX(0);
+}
+
+
+#strange-ul {
+  direction: ltr;
+}
+
+/* На больших экранах включить RTL */
+@media (min-width: 1024px) {
+  #strange-ul {
+    direction: rtl;
+  }
 }
 </style>
